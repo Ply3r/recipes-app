@@ -7,6 +7,7 @@ import Video from '../components/Video';
 import FavoriteAndShareButtons from '../components/FavoriteAndShareButtons';
 import StartRecipeButtons from '../components/StartRecipeButtons';
 import Carousel from '../components/Carousel';
+import Header from '../components/Header';
 import { myContext } from '../context/Provider';
 
 const Comida = ({ match: { params: { id } } }) => {
@@ -30,21 +31,24 @@ const Comida = ({ match: { params: { id } } }) => {
 
     return (
       <>
-        <img data-testid="recipe-photo" src={ strMealThumb } alt={ strMeal } />
-        <h1 data-testid="recipe-title">{ strMeal }</h1>
-        <FavoriteAndShareButtons type="comidas" id={ idMeal } />
-        <h2>Categoria</h2>
-        <p data-testid="recipe-category">{ strCategory }</p>
-        <h2>Ingredientes</h2>
-        <Ingredients item={ info[0] } />
-        <h2>Instruções</h2>
-        <p data-testid="instructions">{ strInstructions }</p>
-        <h2>Video</h2>
-        { !!strYoutube && <Video item={ info[0] } /> }
-        <h2>Compartilhar</h2>
-        <StartRecipeButtons type="food" id={ idMeal } />
-        <h2>Recomendação</h2>
-        <Carousel type="food" />
+        <Header type="food" title={ strMeal } singleRecipe />
+        <div>
+          <img data-testid="recipe-photo" src={ strMealThumb } alt={ strMeal } />
+          <h1 data-testid="recipe-title">{ strMeal }</h1>
+          <FavoriteAndShareButtons type="comidas" id={ idMeal } />
+          <h2>Categoria</h2>
+          <p data-testid="recipe-category">{ strCategory }</p>
+          <h2>Ingredientes</h2>
+          <Ingredients item={ info[0] } />
+          <h2>Instruções</h2>
+          <p data-testid="instructions">{ strInstructions }</p>
+          <h2>Video</h2>
+          { !!strYoutube && <Video item={ info[0] } /> }
+          <h2>Compartilhar</h2>
+          <StartRecipeButtons type="food" id={ idMeal } />
+          <h2>Recomendação</h2>
+          <Carousel type="food" />
+        </div>
       </>
     );
   };
@@ -54,9 +58,9 @@ const Comida = ({ match: { params: { id } } }) => {
   }, [currentRecipe]);
 
   return (
-    <div>
+    <>
       { !!info.length && renderItem() }
-    </div>
+    </>
   );
 };
 

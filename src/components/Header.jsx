@@ -5,9 +5,9 @@ import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
 import SearchBar from './SearchBar';
 import { myContext } from '../context/Provider';
-import { FaUser, FaSearch } from 'react-icons/fa';
+import { FaUser, FaSearch, FaHome } from 'react-icons/fa';
 
-function Header({ title, buttonDisable, type }) {
+function Header({ title, buttonDisable, type, singleRecipe = false }) {
   const [foodName, setFoodName] = useState('');
   const [inputDisable, setInputDisable] = useState(true);
   const { searchEnable } = useContext(myContext);
@@ -36,8 +36,18 @@ function Header({ title, buttonDisable, type }) {
         <h1 data-testid="page-title">{ title }</h1>
 
         <div>
+          { singleRecipe && (
+            <Link to={ type === 'food' ? '/comidas' : '/bebidas' }>
+              <button
+                className="round-button"
+                type='button'
+              >
+                <FaHome />
+              </button>
+            </Link>
+          ) }
           {
-            !buttonDisable && (
+            (!buttonDisable && !singleRecipe) && (
               <button
                 className="round-button"
                 type="button"
