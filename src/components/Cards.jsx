@@ -5,11 +5,9 @@ import '../css/Cards.css';
 import Card from './RecipeCard';
 
 const Cards = ({ info, type }) => {
-  const maxItens = info.slice(0, +'12');
-
   const renderItens = () => {
     if (type === 'food') {
-      const elements = maxItens.map(({
+      const elements = info.map(({
         idMeal,
         strMealThumb,
         strMeal,
@@ -22,7 +20,7 @@ const Cards = ({ info, type }) => {
             index={ index }
             image={ strMealThumb }
             title={ `${strMeal && strMeal.length > +'16' ? (
-              `${strMeal.slice(0, +'16')}...`
+              `${strMeal.slice(0, +'16').trim()}...`
             ) : (
               strMeal
             )}` }
@@ -31,7 +29,7 @@ const Cards = ({ info, type }) => {
       ));
       return elements;
     }
-    const elements = maxItens.map(({
+    const elements = info.map(({
       idDrink,
       strDrinkThumb,
       strDrink,
@@ -44,7 +42,7 @@ const Cards = ({ info, type }) => {
           index={ index }
           image={ strDrinkThumb }
           title={ `${strDrink && strDrink.length > +'16' ? (
-            `${strDrink.slice(0, +'16')}...`
+            `${strDrink.slice(0, +'16').trim()}...`
           ) : (
             strDrink
           )}` }

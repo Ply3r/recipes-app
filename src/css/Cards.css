@@ -3,8 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 10vh;
   width: 100vw;
+}
+
+.category-active {
+  background-color: #881412 !important;
 }
 
 .card {

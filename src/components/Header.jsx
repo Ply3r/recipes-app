@@ -5,6 +5,7 @@ import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
 import SearchBar from './SearchBar';
 import { myContext } from '../context/Provider';
+import { FaUser, FaSearch } from 'react-icons/fa';
 
 function Header({ title, buttonDisable, type }) {
   const [foodName, setFoodName] = useState('');
@@ -28,7 +29,7 @@ function Header({ title, buttonDisable, type }) {
             className="round-button"
             type="button"
           >
-            <img src={ profileIcon } alt="profile icon" />
+            <FaUser />
           </button>
         </Link>
 
@@ -44,7 +45,7 @@ function Header({ title, buttonDisable, type }) {
                 onClick={ onSearchIconClick }
                 src={ searchIcon }
               >
-                <img src={ searchIcon } alt="search icon" />
+                <FaSearch />
               </button>
             )
           }

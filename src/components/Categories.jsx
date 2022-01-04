@@ -27,6 +27,7 @@ const Categories = ({ type }) => {
       <button
         data-testid={ `${strCategory}-category-filter` }
         key={ strCategory }
+        className={ `${category === strCategory ? 'category-active': ''}` }
         type="button"
         onClick={ () => changeCategory(strCategory) }
       >
@@ -45,6 +46,7 @@ const Categories = ({ type }) => {
       <button
         data-testid="All-category-filter"
         type="button"
+        className={ `${category === 'All' ? 'category-active': ''}` }
         onClick={ async () => {
           setFilter('');
           setCategory('All');

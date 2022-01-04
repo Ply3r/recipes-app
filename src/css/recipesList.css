@@ -11,11 +11,12 @@
 }
 
 .round-button {
-  background-color: white;
+  background-color: transparent;
   border: none;
   border-radius: 50%;
   color: white;
   cursor: pointer;
+  font-size: 2em;
   height: 48px;
   width: 48px;
 }
@@ -59,7 +60,7 @@ html {
 
 .input-container {
   align-items: center;
-  background-color: #5a0201;
+  background-color: #6b0504;
   color: white;
   display: flex;
   flex-direction: column;
