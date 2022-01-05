@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 export default function Explorar() {
   return (
     <div>
-      <Header title="Explorar" buttonDisable />
+      <Header title="Explore" singleRecipe />
       <body>
         <Link to="../explorar/comidas">
           <button type="button" data-testid="explore-food">Explorar Comidas</button>

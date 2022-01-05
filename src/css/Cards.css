@@ -37,19 +37,36 @@
 }
 
 .carrousel {
-  align-items: center;
   display: flex;
-  height: 500px;
-  overflow: auto;
+  height: 400px;
   width: 100vw;
+  margin-bottom: 5vh;
+  position: relative;
+  transition: 2s ease;
 }
 
-.carrousel div, .carrousel a {
-  align-items: center;
+.carrousel a {
+  height: 80%;
+  display: grid;
+  color: black;
+  text-decoration: none;
+  place-items: center;
+}
+
+.carrousel div {
+  cursor: pointer;
   display: flex;
+  align-items: center;
   flex-direction: column;
   height: 300px;
   width: 300px;
+  transition: .5s ease;
+}
+
+.carrousel div:hover {
+  width: 310px;
+  height: 310px;
+  z-index: 5;
 }
 
 .carrousel div img {

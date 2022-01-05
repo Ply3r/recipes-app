@@ -36,7 +36,7 @@ const StartRecipeButtons = ({ type, id }) => {
           <button
             data-testid="start-recipe-btn"
             type="button"
-            className="buttons"
+            className="start-recipe-button"
             onClick={ () => {
               if (!inProgress) {
                 startRecipe(type, id);

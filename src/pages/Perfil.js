@@ -20,7 +20,7 @@ export default function Perfil() {
   const headerContent = user === null ? '' : user.email;
   return (
     <div>
-      <Header title="Perfil" buttonDisable searchEnable={ searchEnable } />
+      <Header title="Profile" singleRecipe />
       <h3 data-testid="profile-email">{ headerContent }</h3>
 
       <Link to="../receitas-feitas">

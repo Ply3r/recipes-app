@@ -8,7 +8,9 @@ import FavoriteAndShareButtons from '../components/FavoriteAndShareButtons';
 import StartRecipeButtons from '../components/StartRecipeButtons';
 import Carousel from '../components/Carousel';
 import Header from '../components/Header';
+import '../css/recipesDetail.css';
 import { myContext } from '../context/Provider';
+import { GiCookingGlove, GiCookingPot } from 'react-icons/gi';
 
 const Comida = ({ match: { params: { id } } }) => {
   const [info, setInfo] = useState([]);
@@ -24,29 +26,39 @@ const Comida = ({ match: { params: { id } } }) => {
       idMeal,
       strMeal,
       strMealThumb,
-      strCategory,
       strInstructions,
       strYoutube,
     } = info[0];
 
     return (
       <>
-        <Header type="food" title={ strMeal } singleRecipe />
-        <div>
+        <Header type="food" title="Details" singleRecipe />
+        <div style={ { 'backgroundImage': `url(${strMealThumb})` } } className="details-title">
+          <div>
+            <h1 data-testid="recipe-title">{ strMeal }</h1>
+            <FavoriteAndShareButtons type="comidas" id={ idMeal } />
+          </div>
           <img data-testid="recipe-photo" src={ strMealThumb } alt={ strMeal } />
-          <h1 data-testid="recipe-title">{ strMeal }</h1>
-          <FavoriteAndShareButtons type="comidas" id={ idMeal } />
-          <h2>Categoria</h2>
-          <p data-testid="recipe-category">{ strCategory }</p>
-          <h2>Ingredientes</h2>
-          <Ingredients item={ info[0] } />
-          <h2>Instruções</h2>
-          <p data-testid="instructions">{ strInstructions }</p>
-          <h2>Video</h2>
-          { !!strYoutube && <Video item={ info[0] } /> }
-          <h2>Compartilhar</h2>
+        </div>
+        <div className="container">
           <StartRecipeButtons type="food" id={ idMeal } />
-          <h2>Recomendação</h2>
+          <div className="information-container">
+            <div className="info">
+              <h2><GiCookingGlove /> Ingredients</h2>
+              <Ingredients item={ info[0] } />
+            </div>
+            <div className="info">
+              <h2><GiCookingPot /> Instructions</h2>
+              <p data-testid="instructions">{ strInstructions }</p>
+            </div>
+            { !!strYoutube && (
+              <div className="info">
+                <h2>Video</h2>
+                <Video item={ info[0] } /> 
+              </div>
+            ) }
+          </div>
+          <h2 style={ { 'color': '#cc1613' } }>Recomendação</h2>
           <Carousel type="food" />
         </div>
       </>

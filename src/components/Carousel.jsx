@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import { getRandomItens } from '../services/funcs';
 import CarouselCard from './CarouselCard';
 import { myContext } from '../context/Provider';
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 
 const Carousel = ({ type }) => {
   const { setCurrentRecipe } = useContext(myContext);
+  const [position, setPosition] = useState(0)
   const [info, setInfo] = useState([]);
 
   const getItens = async () => {
@@ -56,8 +58,25 @@ const Carousel = ({ type }) => {
   }, []);
 
   return (
-    <div className="carrousel">
-      { renderItens() }
+    <div style={ { 'position': 'relative' } }>
+      <button
+        className="carrousel-bot prev"
+        onClick={ () => { position > 90 ? setPosition(position - 90)  : setPosition(0) } }
+      >
+        <BiLeftArrowAlt />
+      </button>
+      <button
+        className="carrousel-bot next"
+        onClick={ () => { position < 180 ? setPosition(position + 90) : setPosition(225) } }
+      >
+        <BiRightArrowAlt />
+      </button>
+      <div
+        style={ {'right': `${position}%`} }
+        className="carrousel"
+      >
+        { renderItens() }
+      </div>
     </div>
   );
 };
