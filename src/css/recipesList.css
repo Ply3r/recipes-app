@@ -54,10 +54,6 @@
   background-color: #881412;
 }
 
-html {
-  background-color: #a33432;
-}
-
 .input-container {
   align-items: center;
   background-color: #6b0504;
@@ -95,7 +91,7 @@ html {
 }
 
 .cards-container a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
