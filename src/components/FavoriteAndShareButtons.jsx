@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import copy from 'clipboard-copy';
-import shareIcon from '../images/shareIcon.svg';
 import { addFavorite, removeFavorite, getFavoriteRecipes } from '../services/funcs';
 import { FaHeart, FaRegHeart, FaShareAlt } from 'react-icons/fa';
 
@@ -50,6 +49,7 @@ const FavoriteAndShareButtons = ({ type, id }) => {
           data-testid="share-btn"
           type="button"
           className="round-button"
+          style={ {'color': 'black' } }
           onClick={ () => {
             showMessage();
             copy(`http://localhost:3000/${type}/${id}`);

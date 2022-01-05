@@ -2,20 +2,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import '../../css/explorar.css';
+import { GiCookingPot } from 'react-icons/gi';
+import { BiDrink } from 'react-icons/bi';
+
 
 export default function Explorar() {
   return (
-    <div>
+    <>
       <Header title="Explore" singleRecipe />
-      <body>
+      <div className="explorar-page">
         <Link to="../explorar/comidas">
-          <button type="button" data-testid="explore-food">Explorar Comidas</button>
+          <div className="explorar food">
+            <GiCookingPot />
+            <h1>Explore Foods</h1>
+          </div>
         </Link>
         <Link to="../explorar/bebidas">
-          <button type="button" data-testid="explore-drinks">Explorar Bebidas</button>
+          <div className="explorar drink">
+            <BiDrink />
+            <h1>Explore Drinks</h1>
+          </div>
         </Link>
-      </body>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

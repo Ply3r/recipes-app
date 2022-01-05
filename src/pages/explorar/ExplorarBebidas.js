@@ -17,25 +17,24 @@ export default function ExplorarBebidas() {
   }, []);
 
   return (
-    <div>
-      <Header title="Explorar Bebidas" buttonDisable />
-      <body>
+    <>
+      <Header title="Explore Drinks" singleRecipe />
+      <div className="explorar-page">
 
         <Link to="../explorar/bebidas/ingredientes">
-          <button
-            type="button"
-            data-testid="explore-by-ingredient"
-          >
-            Por Ingredientes
-          </button>
+          <div className="explorar drink-ingredient">
+            <h1>By Ingredient</h1>
+          </div>
         </Link>
 
         <Link to={ `../bebidas/${randomCocktailId}` }>
-          <button type="button" data-testid="explore-surprise">Me Surpreenda!</button>
+          <div className="explorar imLucky-drink">
+            <h1>I'm Lucky</h1>
+          </div>
         </Link>
 
-      </body>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

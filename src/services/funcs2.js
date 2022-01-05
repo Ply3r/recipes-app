@@ -130,5 +130,5 @@ export const getListIngredients = async (type) => {
       .then((res) => res.json())
       .then(({ drinks }) => drinks);
   }
-  return ingredients.slice(0, +'12');
+  return ingredients.slice(0, 50);
 };

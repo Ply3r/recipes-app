@@ -33,6 +33,7 @@ const IngredientCard = ({ type, strIngredient, strIngredient1, index }) => {
       to={ type === 'food' ? '/comidas' : '/bebidas' }
     >
       <div
+        className="card"
         data-testid={ `${index}-ingredient-card` }
       >
         <img
