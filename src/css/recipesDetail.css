@@ -100,6 +100,20 @@
   transition: .2s ease;
 }
 
+.checkboxes-ingredients-container input {
+  margin-right: 5px;
+}
+
+.checkboxes-ingredients-container input:checked {
+  color: #cc1613;
+}
+
+.start-recipe-button:disabled {
+  cursor: auto;
+  box-shadow: none;
+  background-color: #a84e4d;
+}
+
 .start-recipe-button:active {
   box-shadow: none;
 }
