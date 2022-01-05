@@ -104,10 +104,6 @@
   margin-right: 5px;
 }
 
-.checkboxes-ingredients-container input:checked {
-  color: #cc1613;
-}
-
 .start-recipe-button:disabled {
   cursor: auto;
   box-shadow: none;

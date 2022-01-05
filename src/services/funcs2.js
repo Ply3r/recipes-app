@@ -89,6 +89,7 @@ export const doneRecipe = (info, type) => {
       doneDate: new Date(),
       tags: strTags,
     };
+    if (local.find(({ id }) => id === idMeal)) return
   } else {
     const {
       idDrink,
@@ -109,7 +110,10 @@ export const doneRecipe = (info, type) => {
       doneDate: new Date().getDate(),
       tags: strTags,
     };
+    if (local.find(({ id }) => id === idDrink)) return
   }
+
+  console.log(local)
 
   const newDoneRecipe = [...local, newRecipe];
   localStorage.setItem('doneRecipes', JSON.stringify(newDoneRecipe));
