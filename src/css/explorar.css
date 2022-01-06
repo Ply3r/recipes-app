@@ -57,6 +57,20 @@
   background-image: url(../images/imLucky-drink.jpg);
 }
 
+.dropdown-container {
+  width: 100vw;
+  height: 5vh;
+  display: grid;
+  place-items: center;
+}
+
+.dropdown-container select {
+  text-align: center;
+  font-size: 1.2em;
+  width: 200px;
+  height: 4vh;
+}
+
 .explorar-page a {
   display: flex;
   flex-direction: column;
