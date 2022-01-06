@@ -12,13 +12,13 @@ export default function Explorar() {
     <>
       <Header title="Explore" singleRecipe />
       <div className="explorar-page">
-        <Link to="../explorar/comidas">
+        <Link to="/recipes-app/explorar/comidas">
           <div className="explorar food">
             <GiCookingPot />
             <h1>Explore Foods</h1>
           </div>
         </Link>
-        <Link to="../explorar/bebidas">
+        <Link to="/recipes-app/explorar/bebidas">
           <div className="explorar drink">
             <BiDrink />
             <h1>Explore Drinks</h1>

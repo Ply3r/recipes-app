@@ -24,7 +24,7 @@ function Header({ title, buttonDisable, type, singleRecipe = false }) {
   return (
     <>
       <div className="header">
-        <Link to="/perfil" data-testid="profile-top-btn" src={ profileIcon }>
+        <Link to="/recipes-app/perfil" data-testid="profile-top-btn" src={ profileIcon }>
           <button
             className="round-button"
             type="button"
@@ -37,7 +37,7 @@ function Header({ title, buttonDisable, type, singleRecipe = false }) {
 
         <div>
           { singleRecipe && (
-            <Link to={ type === 'food' ? '/comidas' : '/bebidas' }>
+            <Link to={ type === 'food' ? '/recipes-app/comidas' : '/recipes-app/bebidas' }>
               <button
                 className="round-button"
                 type='button'

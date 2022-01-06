@@ -77,7 +77,7 @@ export default function EditPerfil() {
             </label>
           </div>
           <div className="button-container">
-            <Link to="../perfil">
+            <Link to="/recipes-app/perfil">
               <button
                 type="button"
                 className="profile-button recipes-favorite"
@@ -86,7 +86,7 @@ export default function EditPerfil() {
                 Cancel
               </button>
             </Link>
-            <Link to="../perfil">
+            <Link to="/recipes-app/perfil">
               <button
                 type="button"
                 onClick={ concludeEdit }

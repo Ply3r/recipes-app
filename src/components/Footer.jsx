@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer data-testid="footer" className="footer">
-      <Link to="/bebidas">
+      <Link to="/recipes-app/bebidas">
         <button
           type="button"
           className='round-button'
@@ -22,7 +22,7 @@ const Footer = () => {
           <BiDrink />
         </button>
       </Link>
-      <Link to="/explorar">
+      <Link to="/recipes-app/explorar">
         <button
           type="button"
           className='round-button'
@@ -31,7 +31,7 @@ const Footer = () => {
           <FaCompass />
         </button>
       </Link>
-      <Link to="/comidas">
+      <Link to="/recipes-app/comidas">
         <button
           type="button"
           className='round-button'

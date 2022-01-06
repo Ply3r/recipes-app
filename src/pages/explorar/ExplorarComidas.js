@@ -21,19 +21,19 @@ export default function ExplorarBebidas() {
       <Header title="Explorar Comidas" buttonDisable />
       <div className="explorar-page">
 
-        <Link to="../explorar/comidas/ingredientes">
+        <Link to="/recipes-app/explorar/comidas/ingredientes">
           <div className="explorar ex-food food-ingredint">
             <h1>By Ingredients</h1>
           </div>
         </Link>
 
-        <Link to="../explorar/comidas/area">
+        <Link to="/recipes-app/explorar/comidas/area">
           <div className="explorar ex-food area-location">
             <h1>By Origin</h1>
           </div>
         </Link>
 
-        <Link to={ `../comidas/${randomMealId}` }>
+        <Link to={ `/recipes-app/comidas/${randomMealId}` }>
           <div className="explorar ex-food imLucky-food">
             <h1>I'm Lucky!</h1>
           </div>

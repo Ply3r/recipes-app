@@ -52,7 +52,7 @@ const Login = () => {
             { showPassword ? <AiFillEye /> : <AiFillEyeInvisible /> }
           </button>
         </label>
-        <Link to="/comidas">
+        <Link to="/recipes-app/comidas">
           <button
             className="login-bot"
             disabled={ disabled }
