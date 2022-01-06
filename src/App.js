@@ -17,6 +17,7 @@ import Bebida from './pages/Bebida';
 import NotFound from './pages/NotFound';
 import BebidaInProgress from './pages/BebidaInProgress';
 import ComidaInProgress from './pages/ComidaInProgress';
+import EditPerfil from './pages/editProfile';
 
 function App() {
   return (
@@ -62,6 +63,11 @@ function App() {
             exact
             path="/perfil"
             component={ Perfil }
+          />
+          <Route 
+            exact
+            path="/edit-profile"
+            component={ EditPerfil }
           />
           <Route
             exact
