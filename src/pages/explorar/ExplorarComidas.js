@@ -18,7 +18,7 @@ export default function ExplorarBebidas() {
 
   return (
     <div>
-      <Header title="Explorar Comidas" buttonDisable />
+      <Header title="Explorar Comidas" singleRecipe />
       <div className="explorar-page">
 
         <Link to="/recipes-app/explorar/comidas/ingredientes">
