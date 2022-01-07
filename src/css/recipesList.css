@@ -96,15 +96,26 @@
 }
 
 @media screen and ( max-width : 480px ) {
+  .header svg {
+    font-size: 1.5em;
+  }
+
+  .header {
+    font-size: .5em;
+  }
+
+  .categories-buttons {
+    height: 10vh;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
 
   .categories-buttons button {
-    background-color: #b41614;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 0.8em;
-    height: 100%;
-    transition: 0.5s ease;
-    width: 100%;
+    font-size: 0.7em;
+    height: 50%;
+    width: 33.3%;
   }
 }

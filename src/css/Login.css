@@ -81,3 +81,14 @@
 .login-bot:disabled {
   background-color: rgb(252, 87, 87);
 }
+
+@media screen and ( max-width : 480px ) {
+  .login-bot {
+    height: 2.5em;
+  }
+
+  .login-box input {
+    height: 2em;
+  }
+}
+
