@@ -96,3 +96,25 @@ a {
   color: red;
   border: 2px solid red;
 }
+
+@media screen and ( max-width : 480px ) {
+  .profile-container {
+    width: 90%;
+  }
+
+  .profile-edit-icon {
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .flex-column {
+    align-items: center;
+    width: 100%;
+  }
+
+  .profile-button {
+    margin: 0 5px;
+  }
+}
+
