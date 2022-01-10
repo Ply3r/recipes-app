@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '../css/IngredientsWithCheckbox.css';
 import Checkbox from './Checkbox';
-import { getInProgressRecipes, startRecipe } from '../services/funcs';
+import { getInProgressRecipes } from '../services/funcs';
 
 const IngredientsWithCheckBox = ({ item, numberChecked, setNumberChecked, type, id }) => {
   const [localItens, setLocalItens] = useState('');
+
   const findLocalItem = async () => {
     const local = getInProgressRecipes();
     let localItem;
