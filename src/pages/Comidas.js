@@ -43,7 +43,7 @@ const Comidas = () => {
 
   return (
     <div className="page-list">
-      <Header type="food" title="Foods" buttonDisable={ false } />
+      <Header type="food" title="Food" buttonDisable={ false } />
       <Categories type="food" />
       { recipes && <Cards info={ recipes } type="food" /> }
       <Footer />
