@@ -2,6 +2,10 @@
   touch-action: manipulation;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 .footer {
   align-items: center;
   background-color: #6b0504;
@@ -13,7 +17,7 @@
   padding: 0 25px;
   position: fixed;
   text-align: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .footer button {
