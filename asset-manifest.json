@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/recipes-app/static/css/main.96e36cc0.chunk.css",
+    "main.css": "/recipes-app/static/css/main.13097432.chunk.css",
     "main.js": "/recipes-app/static/js/main.7ef15600.chunk.js",
     "main.js.map": "/recipes-app/static/js/main.7ef15600.chunk.js.map",
     "runtime-main.js": "/recipes-app/static/js/runtime-main.1228032d.js",
@@ -8,9 +8,9 @@
     "static/js/2.88b169ed.chunk.js": "/recipes-app/static/js/2.88b169ed.chunk.js",
     "static/js/2.88b169ed.chunk.js.map": "/recipes-app/static/js/2.88b169ed.chunk.js.map",
     "index.html": "/recipes-app/index.html",
-    "precache-manifest.01e05c1326dcc34b4d300ed534298ede.js": "/recipes-app/precache-manifest.01e05c1326dcc34b4d300ed534298ede.js",
+    "precache-manifest.b95afe6f9bbccf4c6ed582baa5d0eefc.js": "/recipes-app/precache-manifest.b95afe6f9bbccf4c6ed582baa5d0eefc.js",
     "service-worker.js": "/recipes-app/service-worker.js",
-    "static/css/main.96e36cc0.chunk.css.map": "/recipes-app/static/css/main.96e36cc0.chunk.css.map",
+    "static/css/main.13097432.chunk.css.map": "/recipes-app/static/css/main.13097432.chunk.css.map",
     "static/js/2.88b169ed.chunk.js.LICENSE.txt": "/recipes-app/static/js/2.88b169ed.chunk.js.LICENSE.txt",
     "static/media/explorar.css": "/recipes-app/static/media/vodka.717c7334.jpg",
     "static/media/Login.css": "/recipes-app/static/media/background.0a2607ce.jpg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.1228032d.js",
     "static/js/2.88b169ed.chunk.js",
-    "static/css/main.96e36cc0.chunk.css",
+    "static/css/main.13097432.chunk.css",
     "static/js/main.7ef15600.chunk.js"
   ]
 }
