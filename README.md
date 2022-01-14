@@ -1,6 +1,6 @@
 # App de Receitas
 
-Este é um site de receitas que utiliza a API do the meals DB para obter as receitas, esse foi um projeto de fim de modulo da Trybe, onde tive que por em pratica todo conhecimento que aprendi no modulo de FrontEnd.
+Este é um site de receitas que utiliza a API do the meals DB para obter as receitas, esse foi um projeto de fim de modulo da Trybe, onde tivemos que por em pratica todo conhecimento que aprendemos no modulo de FrontEnd.
 
 ## Tecnologias utilizadas
  - React
