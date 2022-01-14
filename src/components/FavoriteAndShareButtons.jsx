@@ -52,7 +52,7 @@ const FavoriteAndShareButtons = ({ type, id }) => {
           style={ {'color': 'black' } }
           onClick={ () => {
             showMessage();
-            copy(`https://ply3r.github.io/recipes-app/${type}/${id}`);
+            copy(`https://ply3r.github.io/${type}/${id}`);
           } }
         >
           <FaShareAlt />

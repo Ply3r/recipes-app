@@ -43,7 +43,7 @@ const DoneCard = ({
   };
 
   const showMessage = () => {
-    copy(`https://ply3r.github.io/recipes-app/${type}s/${id}`);
+    copy(`https://ply3r.github.io/${type}s/${id}`);
     setIsCopy(true);
     setTimeout(() => {
       setIsCopy(false);

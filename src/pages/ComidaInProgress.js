@@ -66,7 +66,7 @@ export default function ComidaInProgress({ match: { params: { id } } }) {
         </div>
 
         <div className="container"> 
-          <Link to="/recipes-app/receitas-feitas">
+          <Link to="/receitas-feitas">
             <button
               className="start-recipe-button"
               data-testid="finish-recipe-btn"

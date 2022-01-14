@@ -47,7 +47,7 @@ const IngredientCard = ({ type, strIngredient, strIngredient1, index }) => {
           { type === 'food' ? strIngredient : strIngredient1 }
         </h2>
         { click && <Redirect
-          to={ type === 'food' ? '/recipes-app/comidas' : '/recipes-app/bebidas' }
+          to={ type === 'food' ? '/comidas' : '/bebidas' }
         /> }
       </div>
     </Link>

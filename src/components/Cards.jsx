@@ -13,7 +13,7 @@ const Cards = ({ info, type }) => {
         strMeal,
       }, index) => (
         <Link
-          to={ `/recipes-app/comidas/${idMeal}` }
+          to={ `/comidas/${idMeal}` }
           key={ idMeal }
         >
           <Card
@@ -35,7 +35,7 @@ const Cards = ({ info, type }) => {
       strDrink,
     }, index) => (
       <Link
-        to={ `/recipes-app/bebidas/${idDrink}` }
+        to={ `/bebidas/${idDrink}` }
         key={ idDrink }
       >
         <Card

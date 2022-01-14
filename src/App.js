@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import Provider from './context/Provider';
 import Login from './pages/Login';
 import Comidas from './pages/Comidas';
@@ -21,98 +21,104 @@ import EditPerfil from './pages/editProfile';
 
 function App() {
   return (
-    <Provider>
-      <BrowserRouter>
+    <HashRouter>
+      <Provider>
         <Switch>
           <Route
             exact
-            path="/recipes-app/"
+            path="/"
             component={ Login }
           />
+
           <Route
             exact
-            path="/recipes-app/comidas"
+            path="/comidas"
             component={ Comidas }
           />
           <Route
             exact
-            path="/recipes-app/comidas/:id"
+            path="/comidas/:id"
             component={ Comida }
           />
           <Route
             exact
-            path="/recipes-app/comidas/:id/in-progress"
+            path="/comidas/:id/in-progress"
             component={ ComidaInProgress }
           />
+
           <Route
             exact
-            path="/recipes-app/bebidas/:id"
+            path="/bebidas/:id"
             component={ Bebida }
           />
           <Route
             exact
-            path="/recipes-app/bebidas/:id/in-progress"
+            path="/bebidas/:id/in-progress"
             component={ BebidaInProgress }
           />
           <Route
             exact
-            path="/recipes-app/bebidas"
+            path="/bebidas"
             component={ Bebidas }
           />
+
           <Route
             exact
-            path="/recipes-app/perfil"
+            path="/perfil"
             component={ Perfil }
           />
           <Route 
             exact
-            path="/recipes-app/edit-profile"
+            path="/edit-profile"
             component={ EditPerfil }
           />
+
           <Route
             exact
-            path="/recipes-app/receitas-feitas"
+            path="/receitas-feitas"
             component={ ReceitasFeitas }
           />
           <Route
             exact
-            path="/recipes-app/receitas-favoritas"
+            path="/receitas-favoritas"
             component={ ReceitasFavoritas }
           />
+
           <Route
             exact
-            path="/recipes-app/explorar"
+            path="/explorar"
             component={ Explorar }
           />
           <Route
             exact
-            path="/recipes-app/explorar/comidas"
+            path="/explorar/comidas"
             component={ ExplorarComidas }
           />
           <Route
             exact
-            path="/recipes-app/explorar/bebidas"
+            path="/explorar/bebidas"
             component={ ExplorarBebidas }
           />
           <Route
             exact
-            path="/recipes-app/explorar/comidas/ingredientes"
+            path="/explorar/comidas/ingredientes"
             render={ (props) => <ExplorarIngredientes { ...props } /> }
           />
           <Route
             exact
-            path="/recipes-app/explorar/bebidas/ingredientes"
+            path="/explorar/bebidas/ingredientes"
             render={ (props) => <ExplorarIngredientes { ...props } /> }
           />
           <Route
             exact
-            path="/recipes-app/explorar/comidas/area"
+            path="/explorar/comidas/area"
             component={ ExplorarComidasArea }
           />
+
           <Route component={ NotFound } />
         </Switch>
-      </BrowserRouter>
-    </Provider>
+      </Provider>
+    </HashRouter>
   );
 }
 

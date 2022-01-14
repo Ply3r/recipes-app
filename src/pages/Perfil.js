@@ -23,7 +23,7 @@ export default function Perfil() {
               <FaUser />
             ) }
           </div>
-          <Link to="/recipes-app/edit-profile">
+          <Link to="/edit-profile">
             <button
               className="profile-button edit"
             >
@@ -39,7 +39,7 @@ export default function Perfil() {
             ) }
           </div>
           <div className="button-container">
-            <Link to="/recipes-app/receitas-feitas">
+            <Link to="/receitas-feitas">
               <button
                 type="button"
                 className="profile-button recipes-done"
@@ -48,7 +48,7 @@ export default function Perfil() {
                 Receitas Feitas <MdVerified />
               </button>
             </Link>
-            <Link to="/recipes-app/receitas-favoritas">
+            <Link to="/receitas-favoritas">
               <button
                 type="button"
                 className="profile-button recipes-favorite"
@@ -57,7 +57,7 @@ export default function Perfil() {
                 Receitas Favoritas <FaHeart />
               </button>
             </Link>
-            <Link to="/recipes-app/">
+            <Link to="/">
               <button
                 type="button"
                 className="profile-button exit-button"
